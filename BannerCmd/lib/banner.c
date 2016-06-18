@@ -128,6 +128,7 @@
 
 #include <ctype.h>
 
+#include "banner.h"
 #include "letters.h"
 
 
@@ -600,7 +601,7 @@ static void usage(char *program)
   * be printed as a banner.
   */
 
-int main(int argc, char *argv[])
+int main_banner(int argc, char *argv[])
 {
 
    /*****************
