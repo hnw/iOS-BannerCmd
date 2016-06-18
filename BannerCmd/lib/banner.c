@@ -126,6 +126,8 @@
    #include <string.h>
 #endif
 
+#include <ctype.h>
+
 #include "letters.h"
 
 
@@ -251,13 +253,13 @@ static void convert_whitespace(char *string)
   * @return Boolean true (1) if output was truncated, boolean false (0) otherwise.
   */
 
-static int add_to_banner(char **banner, int height, int space, char letter, int maxwidth)
+static int add_to_banner(char **banner, size_t height, size_t space, char letter, size_t maxwidth)
 {
-   int i = 0;
-   int j = 0;
+   size_t i = 0;
+   size_t j = 0;
    char *previous = NULL;
    char **working_char = NULL;
-   int new_length = 0;
+   size_t new_length = 0;
 
    switch(letter)
    {
@@ -606,7 +608,6 @@ int main(int argc, char *argv[])
     *****************/
 
    int i = 0;
-   int j = 0;
 
    int wordcount = 0;
    char **wordlist = NULL;
@@ -614,7 +615,6 @@ int main(int argc, char *argv[])
    char *columns = NULL;
    int printwidth = 0;
 
-   int truncated = 0;
    char *banner[LETTER_HEIGHT];
    char *string = NULL;
 
