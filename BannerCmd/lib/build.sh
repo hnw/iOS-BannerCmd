@@ -1,7 +1,7 @@
 #!/bin/sh
 
 BUILD_DIR="$(pwd)/build"
-STATIC_LIB_NAME="banner.a"
+STATIC_LIB_NAME="libbanner.a"
 STATIC_LIB_NAME_ARM="${STATIC_LIB_NAME}.arm"
 STATIC_LIB_NAME_X86="${STATIC_LIB_NAME}.x86"
 
